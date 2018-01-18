@@ -133,10 +133,18 @@ def RETURN_replace_negatives_by_zeros(numbers):
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
-    new_list = numbers
-    for k in range(len(new_list)):
-        if new_list[k] < 0:
-            new_list[k] = 0
+    # new_list = numbers.copy()
+    # for k in range(len(new_list)):
+    #     if new_list[k] < 0:
+    #         new_list[k] = 0
+    # return new_list
+
+    new_list = []
+    for k in range(len(numbers)):
+        if numbers[k] < 0:
+            new_list.append(0)
+        else:
+            new_list.append(numbers[k])
     return new_list
 
 def run_test_MUTATE_replace_negatives_by_zeros():
